@@ -254,6 +254,11 @@ body {
     border-radius: var(--radius);
     padding-inline: 1.5rem;
   }
+
+  .result__paragraph {
+    padding-inline: 0;
+  }
+
   .summary {
     width: 50%;
     background-color: var(--white);

@@ -246,7 +246,8 @@ body {
 @media (min-width: 1440px) {
   .card {
     flex-direction: row;
-    max-width: 400px;
+    max-width: 460px;
+    min-width: 460px;
   }
 
   .result {
@@ -256,7 +257,7 @@ body {
   }
 
   .result__paragraph {
-    padding-inline: 0;
+    padding-inline: 1rem;
   }
 
   .summary {

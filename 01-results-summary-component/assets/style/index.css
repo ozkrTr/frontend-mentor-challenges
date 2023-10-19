@@ -247,7 +247,6 @@ body {
   .card {
     flex-direction: row;
     max-width: 460px;
-    min-width: 460px;
   }
 
   .result {

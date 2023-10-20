@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  /* Front-end Style Guide */
+
+  /* Layout */
+
+  /* The designs were created to the following widths: */
+  /* 
+- Mobile: 375px
+- Desktop: 1440px */
+
+  /* Colors */
+
+  /* Primary */
+
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* Neutral */
+
+  /* Transparent */
+
+  /* (paragraphs)  */
+  --white: hsla(0, 0%, 100%, 0.75);
+
+  /* (background, headings, buttons) */
+  --very-light-gray: hsl(0, 0%, 95%);
+
+  /* Typography */
+
+  /* Body Copy */
+
+  --font-size: 15px;
+
+  /* Font */
+  /* 
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400
+
+- Family: [Big Shoulders Display](https://fonts.google.com/specimen/Big+Shoulders+Display)
+- Weights: 700 */
+
+  --bigShoulder: 'Big Shoulders Display', sans-serif;
+  --lexend: 'Lexend Deca', sans-serif;
+
+  --radius: 0.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--lexend);
+  display: grid;
+  place-items: center;
+  padding-block: 2rem;
+  min-height: 100vh;
+  font-size: var(--font-size);
+  background-color: var(--very-light-gray);
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 323px;
+}
+
+.card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 3rem;
+  background-color: var(--bright-orange);
+}
+
+.card__icon {
+  width: 4rem;
+}
+
+.card__title {
+  color: var(--very-light-gray);
+  text-transform: uppercase;
+  font-family: var(--bigShoulder);
+  font-size: 3em;
+}
+
+.card__paragraph {
+  color: var(--white);
+  line-height: 1.5rem;
+}
+
+.card__btn {
+  border: none;
+  border-radius: 100vmax;
+  padding: 1rem 2rem;
+  width: max-content;
+  background-color: var(--very-light-gray);
+  text-transform: capitalize;
+  color: var(--bright-orange);
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.card__btn:hover {
+  transform: scale(1.1);
+}
+
+.card--suvs {
+  background-color: var(--dark-cyan);
+}
+
+.card--luxury {
+  background-color: var(--very-dark-cyan);
+}
+
+.card__btn--suvs {
+  color: var(--dark-cyan);
+}
+
+.card__btn--luxury {
+  color: var(--very-dark-cyan);
+}
+
+/* attribution */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-block: 1rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1000px) {
+  .container {
+    max-width: min-content;
+  }
+  .cards {
+    flex-direction: row;
+  }
+
+  .card {
+    width: 323px;
+  }
+  .card__paragraph {
+    padding-bottom: 4rem;
+  }
+  .attribution {
+    position: absolute;
+    bottom: 0;
+  }
+}

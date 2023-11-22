@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap');
+
+:root {
+  /* Colors */
+
+  --very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+  --desaturated-Dark-Blue: hsl(214, 17%, 51%);
+  --grayish-Blue: hsl(212, 23%, 69%);
+  --light-Grayish-Blue: hsl(210, 46%, 95%);
+
+  --radius: 0.5rem;
+
+  --font: 'Manrope', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 13px;
+  font-family: var(--font);
+  background-color: var(--light-Grayish-Blue);
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  grid-template-rows: 1fr auto;
+}
+
+.card {
+  max-width: 327px;
+  background-color: white;
+  border-radius: var(--radius);
+  overflow: hidden;
+  position: relative;
+}
+
+.card__figure {
+  width: 100%;
+}
+
+.card__img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.card__content {
+  padding-inline: 2rem;
+  padding-block: 1rem;
+}
+
+.card__title {
+  font-size: 1.3em;
+  font-weight: 700;
+  color: var(--very-Dark-Grayish-Blue);
+  margin-top: 2rem;
+}
+
+.card__paragraph {
+  color: var(--desaturated-Dark-Blue);
+  line-height: 1.7em;
+  font-size: 1.03em;
+}
+
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.footer__picture {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.footer__text {
+  display: flex;
+  flex-direction: column;
+  color: var(--grayish-Blue);
+  font-size: 1em;
+  margin-left: -10px;
+  line-height: 1.2rem;
+}
+
+.footer__text--name {
+  color: var(--very-Dark-Grayish-Blue);
+  font-weight: 700;
+}
+
+.footer__icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: url(../images/icon-share.svg);
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: center;
+  background-color: var(--light-Grayish-Blue);
+  z-index: 10;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.footer__icon:focus {
+  background: url(../images/icon-share--white.svg);
+  background-repeat: no-repeat;
+  background-size: 15px;
+  background-position: center;
+  background-color: var(--desaturated-Dark-Blue);
+  + .tooltip {
+    opacity: 1;
+  }
+}
+
+.tooltip {
+  width: 100%;
+  height: 80px;
+  background-color: var(--very-Dark-Grayish-Blue);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: 4fr 1fr 1fr 1fr 3fr;
+  grid-template-rows: 100%;
+  align-items: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.tooltip__icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+}
+
+.tooltip__text {
+  color: var(--grayish-Blue);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+.tooltip__icon--facebook {
+  background-image: url(../images/icon-facebook.svg);
+}
+
+.tooltip__icon--twitter {
+  background-image: url(../images/icon-twitter.svg);
+}
+
+.tooltip__icon--pinterest {
+  background-image: url(../images/icon-pinterest.svg);
+}
+
+/* attribution */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-block: 1rem;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (width > 1440px) {
+  .card {
+    max-width: 730px;
+    display: flex;
+    overflow: unset;
+  }
+
+  .card__img {
+    width: 285px;
+    height: 285px;
+    object-position: left top;
+    border-radius: var(--radius) 0 0 var(--radius);
+  }
+
+  .card__content {
+    padding-block: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-bottom: 2rem;
+  }
+
+  .card__title {
+    font-size: 1.6em;
+  }
+
+  .card__footer {
+    position: relative;
+  }
+
+  .footer__text {
+    position: relative;
+    left: -20%;
+  }
+
+  .tooltip {
+    left: unset;
+    bottom: unset;
+    right: -61%;
+    transform: translateX(-50%);
+    top: -160%;
+    width: 250px;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+    padding-inline: 2rem;
+  }
+
+  .tooltip::after {
+    content: '';
+    border-style: solid;
+    border-color: var(--very-Dark-Grayish-Blue) transparent transparent
+      transparent;
+    border-width: 12px;
+    position: absolute;
+    bottom: -45%;
+  }
+}

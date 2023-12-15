@@ -14,6 +14,7 @@
 
     <title>Frontend Mentor | FAQ Accordion Card</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/app/main.js" defer></script>
   </head>
   <body>
     <main class="faq">
@@ -22,77 +23,93 @@
         alt="orange box"
         class="faq__box"
       />
-      <figure class="faq__illustration">
-        <img
-          src="./assets/images/illustration-woman-online-mobile.svg"
-          alt="woman in front adesktop pc"
-          class="faq__woman--mobile"
-        />
-        <img
-          src="./assets/images/illustration-woman-online-desktop.svg"
-          alt="woman in front adesktop pc"
-          class="faq__woman--desktop"
-        />
+
+      <figure class="illustration">
+        <picture class="illustration__picture">
+          <source
+            media="(width >= 1440px)"
+            srcset="./assets/images/illustration-woman-online-desktop.svg"
+          />
+
+          <img
+            src="./assets/images/illustration-woman-online-mobile.svg"
+            alt="a woman in front of a presentation in the monitor"
+            class="illustration__img"
+          />
+        </picture>
+        <picture class="illustration__picture">
+          <source
+            media="(width >= 1440px)"
+            srcset="./assets/images/bg-pattern-desktop.svg"
+          />
+
+          <img
+            src="./assets/images/bg-pattern-mobile.svg"
+            alt="shadow of the image"
+            class="illustration__img illustration__img--shadow"
+          />
+        </picture>
       </figure>
-      <div class="faq__contains">
+
+      <section class="content">
         <h1 class="faq__title">faq</h1>
 
-        <details class="faq__question-container">
-          <summary class="faq__question">
+        <details class="question">
+          <summary class="question__ask">
             How many team members can I invite?
           </summary>
-          <p class="faq__answer">
+          <div class="question__answer">
             You can invite up to 2 additional users on the Free plan. There is
             no limit on team members for the Premium plan.
-          </p>
+          </div>
         </details>
 
-        <hr class="faq__divider" />
+        <hr class="content__divider" />
 
-        <details class="faq__question-container">
-          <summary class="faq__question">
+        <details class="question">
+          <summary class="question__ask">
             What is the maximum file upload size?
           </summary>
-          <p class="faq__answer">
+          <div class="question__answer">
             No more than 2GB. All files in your account must fit your allotted
             storage space.
-          </p>
+          </div>
         </details>
 
-        <hr class="faq__divider" />
+        <hr class="content__divider" />
 
-        <details class="faq__question-container">
-          <summary class="faq__question">How do I reset my password?</summary>
-          <p class="faq__answer">
+        <details class="question">
+          <summary class="question__ask">How do I reset my password?</summary>
+          <div class="question__answer">
             Click “Forgot password” from the login page or “Change password”
             from your profile page. A reset link will be emailed to you.
-          </p>
+          </div>
         </details>
 
-        <hr class="faq__divider" />
+        <hr class="content__divider" />
 
-        <details class="faq__question-container">
-          <summary class="faq__question">Can I cancel my subscription?</summary>
-          <p class="faq__answer">
+        <details class="question">
+          <summary class="question__ask">Can I cancel my subscription?</summary>
+          <div class="question__answer">
             Yes! Send us a message and we’ll process your request no questions
             asked.
-          </p>
+          </div>
         </details>
 
-        <hr class="faq__divider" />
+        <hr class="content__divider" />
 
-        <details class="faq__question-container">
-          <summary class="faq__question">
+        <details class="question">
+          <summary class="question__ask">
             Do you provide additional support?
           </summary>
-          <p class="faq__answer">
+          <div class="question__answer">
             Chat and email support is available 24/7. Phone lines are open
             during normal business hours.
-          </p>
+          </div>
         </details>
 
-        <hr class="faq__divider" />
-      </div>
+        <hr class="content__divider" />
+      </section>
     </main>
 
     <footer class="attribution">

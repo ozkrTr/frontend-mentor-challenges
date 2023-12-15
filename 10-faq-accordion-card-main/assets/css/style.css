@@ -65,7 +65,7 @@ body {
   align-items: center;
   padding-inline: 1.5rem;
   box-shadow: 10px 30px 80px -15px hsla(0, 0%, 0%, 0.5);
-  margin-top: 50px;
+  margin-top: 150px;
 }
 
 .faq__box {
@@ -157,14 +157,10 @@ body {
 
 /* attributtion */
 .attribution {
-  font-size: 11px;
+  font-size: 12px;
   text-align: center;
   margin-block: 1.5rem;
   margin-top: 3rem;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
   color: var(--light-grayish-blue);
 }
 .attribution a {
